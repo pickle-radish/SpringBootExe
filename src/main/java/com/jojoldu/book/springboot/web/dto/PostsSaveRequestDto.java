@@ -1,6 +1,7 @@
 package com.jojoldu.book.springboot.web.dto;
 
 import com.jojoldu.book.springboot.domain.posts.Posts;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +10,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PostsSaveRequestDto {
 
+
+    @ApiModelProperty(notes = "title of posts")
     private String title;
+    @ApiModelProperty(notes = "content of posts")
     private String content;
+    @ApiModelProperty(notes = "author of posts")
     private String author;
 
     @Builder
